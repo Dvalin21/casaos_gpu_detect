@@ -37,5 +37,6 @@ curl -fsSL https://get.casaos.io | sudo bash
 
 #After complete install.
 sudo apt-get update
-sudo aptitude safe-upgrade
-#sudo apt-get autoremove
+sudo apt-get install aptitude
+sudo aptitude safe-upgrade -y
+sudo apt-get autoremove
