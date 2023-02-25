@@ -19,8 +19,8 @@ fi
 if lspci | grep -i amd; then
   echo "AMD GPU detected"
 sudo apt-get update
-wget https://repo.radeon.com/amdgpu-install/22.40/ubuntu/jammy/amdgpu-install_5.4.50401-1_all.deb
-sudo apt-get install ./amdgpu-install_5.4.50401-1_all.deb -y #Required to hit "Enter" after install and then the rest will continue.
+wget https://repo.radeon.com/amdgpu-install/22.40.3/ubuntu/focal/amdgpu-install_5.4.50403-1_all.deb
+sudo apt-get install ./amdgpu-install_5.4.50403-1_all.deb -y #Required to hit "Enter" after install and then the rest will continue.
 sudo amdgpu-install -y --accept-eula --usecase=rocm,workstation --vulkan=pro --no-32 && sudo apt install vainfo radeontop && sudo apt-get install rocm-dkms rocm-utils rocm-libs rocm-dev && sudo apt install docker-compose && sudo apt install libgl1-mesa-glx libgl1-mesa-dri xserver-xorg-video-amdgpu -y && sudo usermod -a -G video $LOGNAME && sudo usermod -a -G render $LOGNAME
 else
   echo "AMD GPU not detected"
