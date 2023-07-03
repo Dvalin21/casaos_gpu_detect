@@ -5,7 +5,7 @@ sudo apt-get update
 sudo apt-get upgrade -y
 
 #Installing Dependencies
-sudo apt-get install ffmpeg aptitdue -y
+sudo apt-get install ffmpeg -y
 
 #Installing Drivers for Nvidia GPU
 if lspci | grep -i nvidia; then
